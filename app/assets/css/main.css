@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "../fonts/montserrat/stylesheet.css";
+
+:root {
+  --color-blue: #4793ff;
+  --color-blue-200: #4793ff33;
+  --color-gray-100: #f7f9fc;
+  --color-gray: #939cb0;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+body.dark {
+  --color-gray-100: #191919;
+  --color-black: #fff;
+  --color-white: #212121;
+}
+
+@theme {
+  --color-blue-200: var(--color-blue-200);
+  --color-blue-800: var(--color-blue);
+  --color-gray-500: var(--color-gray);
+  --color-gray-100: var(--color-gray-100);
+  --color-black: var(--color-black);
+  --color-white: var(--color-white);
+
+  --font-family-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  transition:
+    color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out,
+    font-size 0.15s ease-in-out;
+}
+body {
+  background-color: var(--color-gray-100);
+  font-family: var(--font-family-sans);
+}
+
+.container {
+  max-width: 1200px;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+.custom-input {
+  box-shadow: none;
+  outline: none;
+  background-color: var(--color-blue-200);
+  font-weight: 500;
+  text-align: center;
+}
+.custom-input::placeholder {
+  transition: color 0.25s ease-in-out;
+}
+
+.card-shadow {
+  box-shadow: 2px 5px 25px -3px #b4b4b440;
+}
+.weather-icon-shadow {
+  box-shadow: 1px 4px 10px -1px #4793ff33;
+}
+.text-gray {
+  color: var(--color-gray-500);
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+}
+
+button:active,
+[role="button"]:active {
+  filter: brightness(0.92) !important;
+  transform: scale(0.98);
+}
