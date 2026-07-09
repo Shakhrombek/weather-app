@@ -52,8 +52,4 @@ export default defineNuxtConfig({
   fonts: {
     provider: "local",
   },
-
-  devServer: {
-    port: 3010,
-  },
 });
