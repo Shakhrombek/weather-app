@@ -9,12 +9,17 @@
   --color-gray: #939cb0;
   --color-black: #000000;
   --color-white: #ffffff;
+  --color-white-100: #e5e7eb;
+  --color-white-200: #f3f4f6;
 }
 
 body.dark {
   --color-gray-100: #191919;
   --color-black: #fff;
   --color-white: #212121;
+
+  --color-white-100: #333333;
+  --color-white-200: #363636;
 }
 
 @theme {
@@ -77,4 +82,11 @@ button:active,
 [role="button"]:active {
   filter: brightness(0.92) !important;
   transform: scale(0.98);
+}
+
+
+.skeleton-pulse {
+  background: linear-gradient(90deg, var(--color-white-100) 25%, var(--color-white-200) 50%, var(--color-white-100) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
 }
