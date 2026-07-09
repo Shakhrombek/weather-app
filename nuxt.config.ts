@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 
   nitro: {
     compressPublicAssets: true,
+    preset: "netlify",
   },
 
   modules: [
